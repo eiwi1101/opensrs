@@ -65,7 +65,7 @@ module OpenSRS
     end
 
     def signature(request)
-      Digest::MD5.hexdigest(Digest::MD5.hexdigest(request + key) + key)
+      Digest::MD5.hexdigest(Digest::MD5.hexdigest(request + @key) + @key)
     end
 
     def http
